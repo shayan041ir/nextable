@@ -21,9 +21,9 @@
 </head>
 
 <body>
-
-    @include('template.sidebar-user-profile');
-    @include('template.sidebar-settings');
+    @include('template.page_loader');
+    @include('template.sidebar_user_profile');
+    @include('template.sidebar_settings');
     @include('template.navigation');
     @include('template.header');
     

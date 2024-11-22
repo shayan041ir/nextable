@@ -43,20 +43,21 @@
 			</ul>
 		</div>
 		<div class="navigation-menu-body">
-			<ul id="navigationDashboards" class="navigation-active">
+
+            <ul id="navigationDashboards" class="navigation-active">
 				<li class="navigation-divider">داشبورد</li>
 				<li>
 					<a class="active" href="{{ url('/') }}">فروش و مدیریت مشتری</a>
 				</li>
 				<li>
-					<a href="dashboard-two.html">پشتیبانی <span class="badge badge-warning">2</span></a>
+					<a href="{{ route('dashboard-two') }}">پشتیبانی <span class="badge badge-warning">2</span></a>
 				</li>
 				<li>
-					<a href="dashboard-three.html">آمار وب سایت </a>
+					<a href="{{ route('dashboard-three') }}">آمار وب سایت </a>
 				</li>
 				<li class="navigation-divider">سایر</li>
 				<li>
-					<a href="widgets.html">ویجت های بیشتر</a>
+					<a href="{{ route('widgets') }}">ویجت های بیشتر</a>
 				</li>
 				<li class="navigation-divider">خلاصه</li>
 				<li>
@@ -105,19 +106,20 @@
 					</a>
 				</li>
 			</ul>
-			<ul id="navigationApps">
+
+            <ul id="navigationApps">
 				<li class="navigation-divider">اپ ها</li>
 				<li>
-					<a href="chat.html">گفتگو</a>
+					<a href="{{ route('chat') }}">گفتگو</a>
 				</li>
 				<li>
-					<a href="inbox.html">ایمیل</a>
+					<a href="{{ route('inbox') }}">ایمیل</a>
 				</li>
 				<li>
-					<a href="calendar.html">تقویم</a>
+					<a href="{{ route('calendar') }}">تقویم</a>
 				</li>
 				<li>
-					<a href="gallery.html">گالری</a>
+					<a href="{{ route('gallery') }}">گالری</a>
 				</li>
 				<li class="navigation-divider">دوستان</li>
 				<li>
@@ -173,73 +175,75 @@
 					</a>
 				</li>
 			</ul>
-			<ul id="navigationPlugins">
+
+            <ul id="navigationPlugins">
 				<li class="navigation-divider">پلاگین ها</li>
-				<li><a href="sweet-alert.html">هشدار Sweet </a></li>
-				<li><a href="lightbox.html">لایت باکس </a></li>
-				<li><a href="toast.html">توست </a></li>
-				<li><a href="tour.html">تور </a></li>
-				<li><a href="slick-slide.html">اسلاید Slick </a></li>
-				<li><a href="nestable.html">لیست تو در تو </a></li>
+				<li><a href="{{ route('sweet_alert') }}">هشدار Sweet </a></li>
+				<li><a href="{{ route('lightbox') }}">لایت باکس </a></li>
+				<li><a href="{{ route('toast') }}">توست </a></li>
+				<li><a href="{{ route('tour') }}">تور </a></li>
+				<li><a href="{{ route('slick_slide') }}">اسلاید Slick </a></li>
+				<li><a href="{{ route('nestable') }}">لیست تو در تو </a></li>
 				<li>
 					<a href="#">نمودار ها</a>
 					<ul>
-						<li><a href="chart-apex.html">Apex</a></li>
-						<li><a href="chartjs.html">Chartjs</a></li>
-						<li><a href="chart-justgage.html">Justgage</a></li>
-						<li><a href="chart-morris.html">Morris</a></li>
-						<li><a href="chart-peity.html">Peity</a></li>
+						<li><a href="{{ route('chart_apex') }}">Apex</a></li>
+						<li><a href="{{ route('chartjs') }}">Chartjs</a></li>
+						<li><a href="{{ route('chart_justgage') }}">Justgage</a></li>
+						<li><a href="{{ route('chart_morris') }}">Morris</a></li>
+						<li><a href="{{ route('chart-peity') }}">Peity</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">نقشه ها</a>
 					<ul>
-						<li><a href="google-map.html">نقشه گوگل</a></li>
-						<li><a href="vector-map.html">نقشه وکتور</a></li>
+						<li><a href="{{ route('google_map') }}">نقشه گوگل</a></li>
+						<li><a href="{{ route('vector_map') }}">نقشه وکتور</a></li>
 					</ul>
 				</li>
 			</ul>
+
 			<ul id="navigationElements">
 				<li class="navigation-divider">عناصر</li>
 				<li>
 					<a href="#">پایه</a>
 					<ul>
-						<li><a href="alerts.html">اعلان‌ها </a></li>
-						<li><a href="badge.html">نشان </a></li>
-						<li><a href="buttons.html">دکمه ها </a></li>
-						<li><a href="pagination.html">صفحه‌بندی </a></li>
-						<li><a href="dropdown.html">منوی کشویی </a></li>
-						<li><a href="accordion.html">باز و بسته شونده </a></li>
-						<li><a href="carousel.html">اسلایدر </a></li>
-						<li><a href="typography.html">تایپوگرافی </a></li>
-						<li><a href="list-group.html">گروه لیست </a></li>
-						<li><a href="media-object.html">رسانه </a></li>
-						<li><a href="images.html">تصاویر </a></li>
-						<li><a href="progress.html">پیشرفت </a></li>
-						<li><a href="modal.html">مودال </a></li>
-						<li><a href="spinners.html">چرخنده ها </a></li>
-						<li><a href="navs.html">ناوبری ها </a></li>
-						<li><a href="tab.html">تب </a></li>
-						<li><a href="tooltip.html">راهنما (تولتیپ) </a></li>
-						<li><a href="popovers.html">پاپ اور </a></li>
+						<li><a href="{{ route('alerts') }}">اعلان‌ها </a></li>
+						<li><a href="{{ route('badge') }}">نشان </a></li>
+						<li><a href="{{ route('buttons') }}">دکمه ها </a></li>
+						<li><a href="{{ route('pagination') }}">صفحه‌بندی </a></li>
+						<li><a href="{{ route('dropdown') }}">منوی کشویی </a></li>
+						<li><a href="{{ route('accordion') }}">باز و بسته شونده </a></li>
+						<li><a href="{{ route('carousel') }}">اسلایدر </a></li>
+						<li><a href="{{ route('typography') }}">تایپوگرافی </a></li>
+						<li><a href="{{ route('list_group') }}">گروه لیست </a></li>
+						<li><a href="{{ route('media_object') }}">رسانه </a></li>
+						<li><a href="{{ route('images') }}">تصاویر </a></li>
+						<li><a href="{{ route('progress') }}">پیشرفت </a></li>
+						<li><a href="{{ route('modal') }}">مودال </a></li>
+						<li><a href="{{ route('spinners') }}">چرخنده ها </a></li>
+						<li><a href="{{ route('navs') }}">ناوبری ها </a></li>
+						<li><a href="{{ route('tab') }}">تب </a></li>
+						<li><a href="{{ route('tooltip') }}">راهنما (تولتیپ) </a></li>
+						<li><a href="{{ route('popovers') }}">پاپ اور </a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">فرم ها</a>
 					<ul>
-						<li><a href="basic-form.html">فرم پایه </a></li>
-						<li><a href="custom-form.html">فرم سفارشی </a></li>
-						<li><a href="advanced-form.html">فرم پیشرفته </a></li>
-						<li><a href="datepicker.html">انتخاب گر تاریخ </a></li>
-						<li><a href="timepicker.html">انتخاب گر زمان </a></li>
-						<li><a href="colorpicker.html">انتخاب گر رنگ </a></li>
-						<li><a href="form-validation.html">اعتبارسنجی فرم </a></li>
-						<li><a href="form-wizard.html">فرم مرحله ای </a></li>
-						<li><a href="file-upload.html">آپلود فایل </a></li>
+						<li><a href="{{ route('basic_form') }}">فرم پایه </a></li>
+						<li><a href="{{ route('custom_form') }}">فرم سفارشی </a></li>
+						<li><a href="{{ route('advanced_form') }}">فرم پیشرفته </a></li>
+						<li><a href="{{ route('datepicker') }}">انتخاب گر تاریخ </a></li>
+						<li><a href="{{ route('timepicker') }}">انتخاب گر زمان </a></li>
+						<li><a href="{{ route('colorpicker') }}">انتخاب گر رنگ </a></li>
+						<li><a href="{{ route('form-validation') }}">اعتبارسنجی فرم </a></li>
+						<li><a href="{{ route('form-wizard') }}">فرم مرحله ای </a></li>
+						<li><a href="{{ route('file-upload') }}">آپلود فایل </a></li>
 						<li><a href="#">ویرایشگر CK</a>
 							<ul>
-								<li><a href="ckeditor-article.html">ویرایشگر مقاله </a></li>
-								<li><a href="ckeditor-inline.html">ویرایشگر درون خطی </a></li>
+								<li><a href="{{ route('ckeditor-article') }}">ویرایشگر مقاله </a></li>
+								<li><a href="{{ route('ckeditor-inline') }}">ویرایشگر درون خطی </a></li>
 							</ul>
 						</li>
 					</ul>

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 @include('template.head');
 <body>
+    @include('template.page_loader');
     @include('template.sidebar_user_profile');
     @include('template.sidebar_settings');
     @include('template.navigation');

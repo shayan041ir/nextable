@@ -36,7 +36,7 @@
 					</a>
 				</li>
 				<li data-toggle="tooltip" title="خروج">
-					<a href="login.html" class="go-to-page">
+					<a href="{{ route('login') }}" class="go-to-page">
 						<i class="icon ti-power-off"></i>
 					</a>
 				</li>
@@ -252,43 +252,43 @@
 					<a href="tables.html">جدول‌ها</a>
 					<ul>
 						<li>
-							<a href="tables.html">جدول‌های پایه </a>
+							<a href="{{ route('tables') }}">جدول‌های پایه </a>
 						</li>
 						<li>
-							<a href="data-table.html">جدول اطلاعات </a>
+							<a href="{{ route('data-table') }}">جدول اطلاعات </a>
 						</li>
 						<li>
-							<a href="responsive-table.html">جدول واکنشگرا </a>
+							<a href="{{ route('responsive-table') }}">جدول واکنشگرا </a>
 						</li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">کارت ها </a>
 					<ul>
-						<li><a href="basic-cards.html">کارت های پایه </a></li>
-						<li><a href="image-cards.html">کارت های تصویری </a></li>
-						<li><a href="card-scroll.html">کارت های اسکرول دار </a></li>
-						<li><a href="other-cards.html">سایر </a></li>
+						<li><a href="{{ route('basic-cards') }}">کارت های پایه </a></li>
+						<li><a href="{{ route('image-cards') }}">کارت های تصویری </a></li>
+						<li><a href="{{ route('card-scroll') }}">کارت های اسکرول دار </a></li>
+						<li><a href="{{ route('other-cards') }}">سایر </a></li>
 					</ul>
 				</li>
-				<li><a href="colors.html">رنگ ها </a></li>
+				<li><a href="{{ route('colors') }}">رنگ ها </a></li>
 				<li>
-					<a href="avatar.html">آواتار ها</a>
+					<a href="{{ route('avatar') }}">آواتار ها</a>
 				</li>
 				<li>
-					<a href="icons.html">آیکن‌ها</a>
+					<a href="{{ route('icons') }}">آیکن‌ها</a>
 				</li>
 			</ul>
 			<ul id="navigationPages">
 				<li class="navigation-divider">صفحات</li>
-				<li><a href="profile.html">پروفایل </a></li>
-				<li><a href="timeline.html">خط زمانی </a></li>
-				<li><a href="invoice.html">صورتحساب </a></li>
-				<li><a href="pricing-table.html">جداول قیمت ها </a></li>
-				<li><a href="search-result.html">نتایج جستجو </a></li>
-				<li><a href="login.html">ورود </a></li>
-				<li><a href="register.html">ثبت نام </a></li>
-				<li><a href="recover-password.html">بازیابی رمز عبور </a></li>
+				<li><a href="{{ route('profile') }}">پروفایل </a></li>
+				<li><a href="{{ route('timeline') }}">خط زمانی </a></li>
+				<li><a href="{{ route('invoice') }}">صورتحساب </a></li>
+				<li><a href="{{ route('pricing-table') }}">جداول قیمت ها </a></li>
+				<li><a href="{{ route('search-result') }}">نتایج جستجو </a></li>
+				<li><a href="{{ route('login') }}">ورود </a></li>
+				<li><a href="{{ route('register') }}">ثبت نام </a></li>
+				<li><a href="{{ route('recover-password') }}">بازیابی رمز عبور </a></li>
 				<li><a href="lock-screen.html">قفل صفحه </a></li>
 				<li>
 					<a href="#">قالب های ایمیل</a>

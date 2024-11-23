@@ -210,3 +210,90 @@ Route::get('/ckeditor-inline', function () {
     return view('ckeditor-inline');
 })->name('ckeditor-inline');
 
+
+
+// tables
+
+Route::get('/tables', function () {
+    return view('tables');
+})->name('tables');
+
+Route::get('/data-table', function () {
+    return view('data-table');
+})->name('data-table');
+
+Route::get('/responsive-table', function () {
+    return view('responsive-table');
+})->name('responsive-table');
+
+
+// کارت ها
+
+Route::get('/basic-cards', function () {
+    return view('basic-cards');
+})->name('basic-cards');
+
+Route::get('/image-cards', function () {
+    return view('image-cards');
+})->name('image-cards');
+
+Route::get('/card-scroll', function () {
+    return view('card-scroll');
+})->name('card-scroll');
+
+Route::get('/other-cards', function () {
+    return view('other-cards');
+})->name('other-cards');
+
+
+//anasor edame
+
+Route::get('/colors', function () {
+    return view('colors');
+})->name('colors');
+
+Route::get('/avatar', function () {
+    return view('avatar');
+})->name('avatar');
+
+Route::get('/icons', function () {
+    return view('icons');
+})->name('icons');
+
+
+
+// safehat
+
+
+Route::get('/profile', function () {
+    return view('profile');
+})->name('profile');
+
+Route::get('/timeline', function () {
+    return view('timeline');
+})->name('timeline');
+
+Route::get('/invoice', function () {
+    return view('invoice');
+})->name('invoice');
+
+Route::get('/pricing-table', function () {
+    return view('pricing-table');
+})->name('pricing-table');
+
+Route::get('/search-result', function () {
+    return view('search-result');
+})->name('search-result');
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/register', function () {
+    return view('register');
+})->name('register');
+
+Route::get('/recover-password', function () {
+    return view('recover-password');
+})->name('recover-password');
+

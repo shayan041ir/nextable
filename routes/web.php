@@ -18,8 +18,26 @@ Route::get('/widgets', function () {
     return view('widgets');
 })->name('widgets');
 
-// app
+// Route::group(['prefix' => 'app'], function () {
 
+//     Route::get('/chat', function () {
+//         return view('chat');
+//     })->name('app.chat');
+
+//     Route::get('/inbox', function () {
+//         return view('inbox');
+//     })->name('app.inbox');
+
+//     Route::get('/calendar', function () {
+//         return view('calendar');
+//     })->name('app.calendar');
+
+//     Route::get('/gallery', function () {
+//         return view('gallery');
+//     })->name('app.gallery');
+// });
+
+// app
 Route::get('/chat', function () {
     return view('chat');
 })->name('chat');
@@ -296,4 +314,51 @@ Route::get('/register', function () {
 Route::get('/recover-password', function () {
     return view('recover-password');
 })->name('recover-password');
+
+Route::get('/lock-screen', function () {
+    return view('lock-screen');
+})->name('lock-screen');
+
+
+
+
+// قالب های ایمیل
+
+
+Route::get('/email-template-basic', function () {
+    return view('email-template-basic');
+})->name('email-template-basic');
+
+Route::get('/email-template-alert', function () {
+    return view('email-template-alert');
+})->name('email-template-alert');
+
+Route::get('/email-template-billing', function () {
+    return view('email-template-billing');
+})->name('email-template-billing');
+
+
+
+// khata ha
+
+
+Route::get('/404', function () {
+    return view('404');
+})->name('404');
+
+Route::get('/404-2', function () {
+    return view('404-2');
+})->name('404-2');
+
+Route::get('/503', function () {
+    return view('503');
+})->name('503');
+
+Route::get('/mean-at-work', function () {
+    return view('mean-at-work');
+})->name('mean-at-work');
+
+Route::get('/blank-page', function () {
+    return view('blank-page');
+})->name('blank-page');
 

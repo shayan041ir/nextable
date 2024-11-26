@@ -289,25 +289,25 @@
 				<li><a href="{{ route('login') }}">ورود </a></li>
 				<li><a href="{{ route('register') }}">ثبت نام </a></li>
 				<li><a href="{{ route('recover-password') }}">بازیابی رمز عبور </a></li>
-				<li><a href="lock-screen.html">قفل صفحه </a></li>
+				<li><a href="{{ route('lock-screen') }}">قفل صفحه </a></li>
 				<li>
 					<a href="#">قالب های ایمیل</a>
 					<ul>
-						<li><a href="email-template-basic.html">پایه</a></li>
-						<li><a href="email-template-alert.html">هشدار</a></li>
-						<li><a href="email-template-billing.html">صورتحساب</a></li>
+						<li><a href="{{ route('email-template-basic') }}">پایه</a></li>
+						<li><a href="{{ route('email-template-alert') }}">هشدار</a></li>
+						<li><a href="{{ route('email-template-billing') }}">صورتحساب</a></li>
 					</ul>
 				</li>
 				<li>
 					<a href="#">صفحات خطا </a>
 					<ul>
-						<li><a href="404.html">404 </a></li>
-						<li><a href="404-2.html">404 نسخه 2</a></li>
-						<li><a href="503.html">503 </a></li>
-						<li><a href="mean-at-work.html">تعمیرات </a></li>
+						<li><a href="{{ route('404') }}">404 </a></li>
+						<li><a href="{{ route('404-2') }}">404 نسخه 2</a></li>
+						<li><a href="{{ route('503') }}">503 </a></li>
+						<li><a href="{{ route('mean-at-work') }}">تعمیرات </a></li>
 					</ul>
 				</li>
-				<li><a href="blank-page.html">صفحه شروع</a></li>
+				<li><a href="{{ route('blank-page') }}">صفحه شروع</a></li>
 				<li>
 					<a href="#">سطح منو</a>
 					<ul>

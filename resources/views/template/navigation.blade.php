@@ -47,7 +47,7 @@
             <ul id="navigationDashboards" class="navigation-active">
 				<li class="navigation-divider">داشبورد</li>
 				<li>
-					<a class="active" href="{{ url('/') }}">فروش و مدیریت مشتری</a>
+					<a class="active" href="{{ route('dashboard') }}">فروش و مدیریت مشتری</a>
 				</li>
 				<li>
 					<a href="{{ route('dashboard-two') }}">پشتیبانی <span class="badge badge-warning">2</span></a>

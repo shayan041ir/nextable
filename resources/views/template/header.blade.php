@@ -4,7 +4,7 @@
 
 		<!-- begin::header logo -->
 		<div class="header-logo">
-			<a href="{{ route('welcome') }}">
+			<a href="{{ route('dashboard') }}">
 				<img class="large-logo" src="{{ asset('assets/media/image/logo.png') }}" alt="image">
 				<img class="small-logo" src="{{ asset('assets/media/image/logo-sm.png') }}" alt="image">
 				<img class="dark-logo" src="{{ asset('assets/media/image/logo-sm.png') }}" alt="image">
@@ -22,7 +22,7 @@
 				<!-- begin::breadcrumb -->
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb">
-						<li class="breadcrumb-item"><a href="#">داشبورد</a></li>
+						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">داشبورد</a></li>
 						<li class="breadcrumb-item active" aria-current="page">فروش و مدیریت مشتری</li>
 					</ol>
 				</nav>

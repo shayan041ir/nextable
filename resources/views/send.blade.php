@@ -38,7 +38,7 @@
         {{-- {{ session('verification_code') }} --}}
 
         <!-- form -->
-        <form class="needs-validation" method="post" action="{{ route('send') }}">
+        <form class="needs-validation" method="post" action="{{ route('send.OkCode') }}">
             @csrf
             <div class="form-group d-flex flex-row-reverse">
                 <input id="intTextBox" type="text" class="form-control frm-code mx-1 text-center" maxlength="1"
@@ -50,7 +50,8 @@
                 <input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value=""
                     name="S4" pattern="[0-9]*" inputmode="numeric" />
             </div>
-            <button class="btn btn-primary btn-block">تایید و ادامه</button>
+            {{-- <a href="{{ route('dashboard') }}">go</a> --}}
+            <button class="btn btn-primary btn-block" type="submit" >تایید و ادامه</button>
             <form method="POST" action="{{ route('send.sendnum') }}" class="mt-3">
                 @csrf
                 <button class="btn btn-link text-muted btn-sm">ارسال مجدد کد</button>
@@ -70,6 +71,8 @@
                 });
             });
         </script>
+        @dd($errors,session('verification_code'));
+
 </body>
 
 </html>

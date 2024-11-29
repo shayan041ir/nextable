@@ -7,7 +7,7 @@ use App\Http\Controllers\SendController;
 use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('dashboard');
-});
+})->name('dashboard');
 
 Route::get('/bosh', function () {
     return view('bosh');
@@ -312,15 +312,15 @@ Route::get('/search-result', function () {
     return view('search-result');
 })->name('search-result');
 
-// Route::get('/login', function () {
-//     return view('login');
-// })->name('login');
+
+
+
 Route::get('/login',[LoginController::class,'index'])->name('login');
 Route::post('/login',[LoginController::class,'verify'])->name('login.verify');
 
 
 Route::get('/send',[SendController::class,'sendnum'])->name('send.sendnum');
-Route::post('/send',[SendController::class,'OkCode'])->name('send');
+Route::post('/send',[SendController::class,'OkCode'])->name('send.OkCode');
 
 
 

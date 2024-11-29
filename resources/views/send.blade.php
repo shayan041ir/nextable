@@ -32,31 +32,44 @@
 
         <h5>ورود</h5>
         @if (isset($Rnum))
-        <h6>{{ $Rnum }}</h6>
+            <h6>{{ $Rnum }}</h6>
         @endif
         <br>
         {{-- {{ session('verification_code') }} --}}
 
         <!-- form -->
-		<form class="needs-validation" method="post" action="{{ route('send') }}">
+        <form class="needs-validation" method="post" action="{{ route('send') }}">
             @csrf
-			<div class="form-group d-flex flex-row-reverse">
-				<input id="intTextBox" type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S1" pattern="[0-9]*" inputmode="numeric" autofocus/>
-				<input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S2" pattern="[0-9]*" inputmode="numeric" />
-				<input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S3" pattern="[0-9]*" inputmode="numeric"/>
-				<input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S4" pattern="[0-9]*" inputmode="numeric"/>
-			</div>
-			<button class="btn btn-primary btn-block">تایید و ادامه</button>
+            <div class="form-group d-flex flex-row-reverse">
+                <input id="intTextBox" type="text" class="form-control frm-code mx-1 text-center" maxlength="1"
+                    value="" name="S1" pattern="[0-9]*" inputmode="numeric" autofocus />
+                <input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value=""
+                    name="S2" pattern="[0-9]*" inputmode="numeric" />
+                <input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value=""
+                    name="S3" pattern="[0-9]*" inputmode="numeric" />
+                <input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value=""
+                    name="S4" pattern="[0-9]*" inputmode="numeric" />
+            </div>
+            <button class="btn btn-primary btn-block">تایید و ادامه</button>
             <form method="POST" action="{{ route('send.sendnum') }}" class="mt-3">
                 @csrf
                 <button class="btn btn-link text-muted btn-sm">ارسال مجدد کد</button>
             </form>
         </form>
-    <!-- Plugin scripts -->
-    <script src="{{ asset('vendors/bundle.js') }}"></script>
+        <!-- Plugin scripts -->
+        <script src="{{ asset('vendors/bundle.js') }}"></script>
 
-    <!-- App scripts -->
-    <script src="{{ asset('assets/js/app.js') }}"></script>
+        <!-- App scripts -->
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <script>
+            document.querySelectorAll('.frm-code').forEach((input, index, inputs) => {
+                input.addEventListener('input', function() {
+                    if (this.value.length === 1 && index < inputs.length - 1) {
+                        inputs[index + 1].focus(); // انتقال به فیلد بعدی
+                    }
+                });
+            });
+        </script>
 </body>
 
 </html>

@@ -1,14 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use \App\Http\Controllers\LoginController;
+use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SendController;
+use App\Http\Controllers\DashboardController;
 Route::get('/', function () {
     return view('dashboard');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+Route::get('/bosh', function () {
+    return view('bosh');
+});
+
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
 
 Route::get('/dashboard-two', function () {
     return view('dashboard-two');
@@ -307,9 +312,26 @@ Route::get('/search-result', function () {
     return view('search-result');
 })->name('search-result');
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
+// Route::get('/login', function () {
+//     return view('login');
+// })->name('login');
+Route::get('/login',[LoginController::class,'index'])->name('login');
+Route::post('/login',[LoginController::class,'verify'])->name('login.verify');
+
+
+Route::get('/send',[SendController::class,'sendnum'])->name('send.sendnum');
+Route::post('/send',[SendController::class,'OkCode'])->name('send');
+
+
+
+Route::get('/menu', [MenuController::class, 'index'])->name('menu.index');
+Route::post('/menu/store', [MenuController::class, 'store'])->name('menu.store');
+Route::get('/menu/edit/{id}', [MenuController::class, 'edit'])->name('menu.edit');
+Route::post('/menu/update/{id}', [MenuController::class, 'update'])->name('menu.update');
+Route::get('/menu/delete/{id}', [MenuController::class, 'destroy'])->name('menu.destroy');
+Route::post('/menu/upload/{id}', [MenuController::class, 'uploadImage'])->name('menu.uploadImage');
+
+
 
 Route::get('/register', function () {
     return view('register');

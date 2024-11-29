@@ -31,23 +31,27 @@
         <!-- ./ logo -->
 
         <h5>ورود</h5>
+        @if (isset($Rnum))
+        <h6>{{ $Rnum }}</h6>
+        @endif
+        <br>
+        {{-- {{ session('verification_code') }} --}}
 
-        		<!-- form -->
-		<form class="needs-validation" method="post" action="{{ route('login.verify') }}">
+        <!-- form -->
+		<form class="needs-validation" method="post" action="{{ route('send') }}">
             @csrf
-			<div class="form-group">
-				<input type="text" class="form-control mb-0" id="mobile" name="phone"  data-input-mask="phone" placeholder="شماره موبایل" maxlength="11" pattern="[0-9]*" inputmode="numeric" required>
-				<div class="invalid-feedback text-left">
-					لطفا شماره موبایل را وارد کنید.
-				</div>
+			<div class="form-group d-flex flex-row-reverse">
+				<input id="intTextBox" type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S1" pattern="[0-9]*" inputmode="numeric" autofocus/>
+				<input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S2" pattern="[0-9]*" inputmode="numeric" />
+				<input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S3" pattern="[0-9]*" inputmode="numeric"/>
+				<input type="text" class="form-control frm-code mx-1 text-center" maxlength="1" value="" name="S4" pattern="[0-9]*" inputmode="numeric"/>
 			</div>
 			<button class="btn btn-primary btn-block">تایید و ادامه</button>
-			<hr>
-			<p class="text-muted">حساب کاربری دارید؟</p>
-			<a href="login.php" class="btn btn-outline-light btn-sm">وارد شوید!</a>
-		</form>
-
-    </div>
+            <form method="POST" action="{{ route('send.sendnum') }}" class="mt-3">
+                @csrf
+                <button class="btn btn-link text-muted btn-sm">ارسال مجدد کد</button>
+            </form>
+        </form>
     <!-- Plugin scripts -->
     <script src="{{ asset('vendors/bundle.js') }}"></script>
 

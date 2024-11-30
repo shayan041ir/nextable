@@ -36,6 +36,16 @@
         @endif
         <br>
         {{-- {{ session('verification_code') }} --}}
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                {{ $errors->first() }}
+            </div>
+        @endif
 
         <!-- form -->
         <form class="needs-validation" method="post" action="{{ route('send.OkCode') }}">
@@ -51,7 +61,7 @@
                     name="S4" pattern="[0-9]*" inputmode="numeric" />
             </div>
             {{-- <a href="{{ route('dashboard') }}">go</a> --}}
-            <button class="btn btn-primary btn-block" type="submit" >تایید و ادامه</button>
+            <button class="btn btn-primary btn-block" type="submit">تایید و ادامه</button>
             <form method="POST" action="{{ route('send.sendnum') }}" class="mt-3">
                 @csrf
                 <button class="btn btn-link text-muted btn-sm">ارسال مجدد کد</button>

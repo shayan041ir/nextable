@@ -9,8 +9,7 @@ class SendController extends Controller
 
     public function sendnum()
     {
-        // $Rnum = rand(1000, 9999);
-        $Rnum = 1234;
+        $Rnum = rand(1000, 9999);
         session(['verification_code' => $Rnum]);
         return view('send', ['Rnum' => $Rnum]);
     }
@@ -25,19 +24,17 @@ class SendController extends Controller
         ]);
         // dd($validatedData);
         // بررسی وجود کد تأیید در سشن
-        $storedCode = 1234;
-        // $storedCode = session('verification_code');
-        // if (!$storedCode) {
-        //     return redirect()->back()->withErrors(['error' => 'کد تأیید یافت نشد!']);
-        // }
+        $storedCode = session('verification_code',1234);
+        if (!$storedCode) {
+            return redirect()->route('send.sendnum')->withErrors(['error' => 'کد تأیید منقضی شده است. لطفاً دوباره تلاش کنید.']);
+        }
         // dd($storedCode);
 
         // ترکیب کد ورودی
-        // $userCode = implode('', array_values($validatedData));
-        $userCode = (int)implode('', array_values($validatedData));
+        $userCode = implode('', array_values($validatedData));
+        // $userCode = (int)implode('', array_values($validatedData));
         // $userCode = $validatedData['S1'] . $validatedData['S2'] . $validatedData['S3'] . $validatedData['S4'];
 
-        // dd($validatedData,$storedCode,$userCode);
         // مقایسه کد ورودی با کد ذخیره‌شده در سشن
         if ($userCode == $storedCode) {
             // session()->forget('verification_code');
@@ -46,7 +43,8 @@ class SendController extends Controller
             // return to_route('dashboard')->with('success', 'کد با موفقیت تأیید شد!');
 
         }else{
-            return redirect()->back()->withErrors(['error' => 'کد وارد شده صحیح نیست!']);
+            // dd($validatedData,$userCode,session('verification_code'),$storedCode);
+            return redirect()->back()->withErrors(['error' => 'کد وارد شده نادرست است. در صورت لزوم کد جدید درخواست کنید.']);
         }
     }
 }

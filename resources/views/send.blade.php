@@ -71,7 +71,7 @@
                 });
             });
         </script>
-        @dd($errors,session('verification_code'));
+        {{-- @dd($errors, session('verification_code')); --}}
 
 </body>
 

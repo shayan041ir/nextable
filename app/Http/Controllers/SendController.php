@@ -40,7 +40,8 @@ class SendController extends Controller
         // dd($validatedData,$storedCode,$userCode);
         // مقایسه کد ورودی با کد ذخیره‌شده در سشن
         if ($userCode == $storedCode) {
-            session()->forget(['verification_code', 'phone']); // پاک‌سازی سشن
+            // session()->forget('verification_code');
+            session()->flush();
             return to_route('dashboard')->with('success', 'کد با موفقیت تأیید شد!');
             // return to_route('dashboard')->with('success', 'کد با موفقیت تأیید شد!');
 

@@ -5,6 +5,8 @@ use \App\Http\Controllers\LoginController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SendController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RegisterController;
+
 Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
@@ -331,11 +333,8 @@ Route::post('/menu/update/{id}', [MenuController::class, 'update'])->name('menu.
 Route::get('/menu/delete/{id}', [MenuController::class, 'destroy'])->name('menu.destroy');
 Route::post('/menu/upload/{id}', [MenuController::class, 'uploadImage'])->name('menu.uploadImage');
 
-
-
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+Route::get('/register',[RegisterController::class,'index'])->name('register');
+Route::post('/register',[RegisterController::class,'SN'])->name('register.SN');
 
 Route::get('/recover-password', function () {
     return view('recover-password');

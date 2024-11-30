@@ -34,18 +34,19 @@
 		<h5>ایجاد حساب</h5>
 
 		<!-- form -->
-		<form>
+		<form action="{{ route('register.SN') }}" method="post">
+            @csrf
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="نام" required autofocus>
+				<input type="text" name="username" class="form-control" placeholder="نام" required autofocus>
 			</div>
 			<div class="form-group">
-				<input type="text" class="form-control" placeholder="نام خانوادگی" required>
+				<input type="email" name="email" class="form-control text-left" placeholder="ایمیل" dir="ltr" required>
 			</div>
 			<div class="form-group">
-				<input type="email" class="form-control text-left" placeholder="ایمیل" dir="ltr" required>
+				<input type="phone" name="phone" class="form-control text-left" placeholder="شماره مبایل" dir="ltr" required>
 			</div>
 			<div class="form-group">
-				<input type="password" class="form-control text-left" placeholder="رمز عبور" dir="ltr" required>
+				<input type="password" name="pass" class="form-control text-left" placeholder="رمز عبور" dir="ltr" required>
 			</div>
 			<button class="btn btn-primary btn-block">ثبت نام</button>
 			<hr>

@@ -28,6 +28,11 @@
 						<i class="icon ti-user"></i>
 					</a>
 				</li>
+				<li data-toggle="tooltip" title="menus">
+					<a href="#menus" title="menu">
+						<i class="icon ti-user"></i>
+					</a>
+				</li>
 			</ul>
 			<ul>
 				<li data-toggle="tooltip" title="ویرایش پروفایل">
@@ -319,6 +324,11 @@
 					</ul>
 				</li>
 			</ul>
+            <ul id="menus">
+                <li>menus</li>
+				<li><a href="{{ route('menu') }}">menu </a></li>
+
+            </ul>
 		</div>
 	</div>
 	<!-- end::navigation -->

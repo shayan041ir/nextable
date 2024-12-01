@@ -10,7 +10,7 @@ class MenuController extends Controller
     public function index()
     {
         $menus = Menu::all(); // تمام رکوردهای منو را دریافت می‌کند
-        return view('menu.index', compact('menus'));
+        return view('menu', compact('menus'));
     }
 
     // ذخیره کردن اطلاعات منو
